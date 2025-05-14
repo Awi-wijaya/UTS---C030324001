@@ -83,15 +83,12 @@ do
   switch (pl)
   {
    case '1':
-    mPertama("pertama");
     inputData();
     break;
    case '2':
-    mPertama("ke- dua");
     showData();
     break;  
     case '3':
-    mPertama("ke- tiga");
      insertionSort();
     break;
     case '4':
