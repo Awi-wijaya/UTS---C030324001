@@ -33,17 +33,13 @@ void inputData() {
     }
 }
 
-void showData() {
-  system("cls");
-    if (!dataTersedia) {
-        cout << "\nBelum ada data! Silakan input data terlebih dahulu.\n";
-    } else {
-        cout << "\nIsi array saat ini: ";
-        for (int i = 0; i < N; i++) {
-            cout << data[i] << " ";
-        }
+void outputData() {
+    system("cls");
+    cout << "Array yang diinput: ";
+    for (int i = 0; i < n; ++i) {
+        cout << array[i];
+        if (i != n - 1) cout << ", "; 
     }
-    cout << "\n\nTekan tombol untuk kembali...";
     getch();
 }
 
