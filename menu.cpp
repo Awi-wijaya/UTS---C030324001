@@ -19,24 +19,18 @@ cout<<"Masukan angka :";
 
 void inputData() {
     system("cls");
-    cout << "=== INPUT DATA ARRAY ===\n\n";
-    for (int i = 0; i < N; i++) {
-        while (true) {
-            cout << "Masukkan nilai ke-" << i + 1 << " : ";
-            cin >> data[i];
-
-            if (cin.fail()) {
-                cin.clear();
-                cin.ignore(1000, '\n');
-                cout << "Input tidak valid! Harus berupa angka.\n";
-            } else {
-                break;
-            }
-        }
+    cout << "Masukkan jumlah elemen array (maksimal " << MAX_SIZE << "): ";
+    cin >> n;
+    if (n > MAX_SIZE) {
+        cout << "Jumlah elemen melebihi batas maksimum!" << endl;
+        getch();
+        return;
     }
-    dataTersedia = true; // data sudah diisi
-    cout << "\nData berhasil disimpan. Tekan tombol untuk kembali...";
-    getch();
+    cout << "Masukkan " << n << " angka:\n";
+    for (int i = 0; i < n; ++i) {
+        cout << "Elemen ke-" << i + 1 << ": ";
+        cin >> array[i];
+    }
 }
 
 void showData() {
