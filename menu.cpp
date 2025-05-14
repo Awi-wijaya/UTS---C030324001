@@ -2,9 +2,9 @@
 #include <conio.h>
 using namespace std;
 
-const int N = 5;
-int data[N]; // Array dibuat global agar bisa digunakan di semua fungsi
-bool dataTersedia = false;
+const int MAX_SIZE = 100; // Ukuran maksimum array
+int array[MAX_SIZE]; // Array dibuat global agar bisa digunakan di semua fungsi
+int n; // Jumlah elemen array
 
 void dMenu(){
 system("cls");
@@ -15,12 +15,6 @@ cout<<"3. Sorting data"<<"\n";
 cout<<"4. Sepatah Kata"<<"\n";            
 cout<<"5. Exit"<<"\n";           
 cout<<"Masukan angka :";        
-}
-
-void mPertama(string pesan){
-system("cls");
-cout<<"hallo saya menu"<<pesan;
-getch();
 }
 
 void inputData() {
@@ -131,7 +125,6 @@ do
      insertionSort();
     break;
     case '4':
-    mPertama("ke- empat");
     SepatahKata();
     break;
     case '5':
