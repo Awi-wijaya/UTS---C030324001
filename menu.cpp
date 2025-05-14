@@ -43,46 +43,26 @@ void outputData() {
     getch();
 }
 
-void insertionSort() {
-    if (!dataTersedia) {
-        cout << "\nBelum ada data yang bisa diurutkan!\n";
-        cout << "Silakan input data terlebih dahulu.\n";
-        getch();
-        return;
-    }
-
+void bubbleSort() {
     system("cls");
-    cout << "=== PROSES INSERTION SORT ===\n\n";
-
-    for (int i = 1; i < N; i++) {
-        int key = data[i];
-        int j = i - 1;
-
-        cout << "Langkah ke-" << i << " (key = " << key << "):\n";
-
-        // Proses geser elemen yang lebih besar dari key
-        while (j >= 0 && data[j] > key) {
-            data[j + 1] = data[j];
-            j--;
+    // Melakukan bubble sort
+    for (int i = 0; i < n - 1; ++i) {
+        for (int j = 0; j < n - i - 1; ++j) {
+            if (array[j] > array[j + 1]) {
+                // Tukar array[j] dan array[j + 1]
+                int temp = array[j];
+                array[j] = array[j + 1];
+                array[j + 1] = temp;
+            }
         }
-
-        data[j + 1] = key;
-
-        // Tampilkan array setelah langkah ini
-        cout << "Array: ";
-        for (int k = 0; k < N; k++) {
-            cout << data[k] << " ";
-        }
-        cout << "\n\n";
     }
 
-    cout << "=== HASIL AKHIR SETELAH SORTING ===\n";
-    cout<<  "Metode Sorting Insertion Ascending";
-    for (int i = 0; i < N; i++) {
-        cout << data[i] << " ";
+    // Menampilkan hasil setelah pengurutan
+    cout << "Array setelah diurutkan: ";
+    for (int i = 0; i < n; ++i) {
+        cout << array[i];
+        if (i != n - 1) cout << ", "; 
     }
-
-    cout << "\n\nTekan tombol untuk kembali...";
     getch();
 }
 
