@@ -68,7 +68,7 @@ void bubbleSort() {
 
 void SepatahKata(){
   system("cls");
-  cout<<"Bersatu kita tegus bercerai kawin lagi";
+  cout<<"Bersatu kita teguh bercerai kawin lagi";
   cout<<"Poliban 2025";
   getch();
 }
