@@ -86,10 +86,10 @@ do
     inputData();
     break;
    case '2':
-    showData();
+    outputData();
     break;  
     case '3':
-     insertionSort();
+    bubbleSort();
     break;
     case '4':
     SepatahKata();
